@@ -1,2 +1,8 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import NewsFeed from '$lib/NewsFeed.svelte';
+	import CurrencyConverter from '$lib/CurrencyConverter.svelte';
+</script>
+
+<h1>Dashboard</h1>
+<CurrencyConverter />
+<NewsFeed />
