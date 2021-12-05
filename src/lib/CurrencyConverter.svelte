@@ -1,12 +1,12 @@
-<script>
+<script lang="ts">
 	import ExchangeRateDisplay from '$lib/ExchangeRateDisplay.svelte';
 
 	const currencies = ['BTC', 'SOL', 'ETH', 'USD', 'XRP', 'LTC', 'ADA', 'AVAX'];
-	let selectedPrimaryCurrency;
+	let selectedPrimaryCurrency: string;
 	let selectedSecondaryCurrency = 'USD';
 	let primaryCurrencyAmount = 1;
-	let secondaryCurrencyAmount;
-	let exchangeRate;
+	let secondaryCurrencyAmount: number;
+	let exchangeRate: number;
 
 	async function convert() {
 		const response = await fetch(
@@ -15,7 +15,7 @@
 				method: 'GET',
 				headers: {
 					'x-rapidapi-host': 'alpha-vantage.p.rapidapi.com',
-					'x-rapidapi-key': 'cf44bd63c4msh5d132e3ec61e605p1ad5c2jsn150d55968fe8'
+					'x-rapidapi-key': import.meta.env.VITE_RAPID_API_KEY as string
 				}
 			}
 		);
