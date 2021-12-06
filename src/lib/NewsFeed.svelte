@@ -9,7 +9,7 @@
 			{#if i < 7}
 				<li>
 					<a target="_blank" href={url}>
-						<h3>{title}</h3>
+						<h4>{title}</h4>
 					</a>
 				</li>
 			{/if}
@@ -19,6 +19,17 @@
 
 <style>
 	.news-feed {
-		background-color: red;
+		background-color: rgb(204, 204, 231);
+		padding: 10px;
+		margin: 5px;
+		border-radius: 10px;
+		box-shadow: 0 2px 5px rgb(0, 0, 0);
+		max-width: 300px;
+	}
+
+	.news-feed ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
 	}
 </style>

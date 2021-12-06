@@ -23,5 +23,13 @@
 </script>
 
 <h1>Dashboard</h1>
-<CurrencyConverter />
-<NewsFeed articles={data} />
+<div class="container">
+	<CurrencyConverter />
+	<NewsFeed articles={data} />
+</div>
+
+<style>
+	.container {
+		display: flex;
+	}
+</style>
